@@ -497,16 +497,16 @@ class ZoomVideoSdk extends ZoomVideoSdkPlatform {
     var configMap = <String, dynamic>{};
     configMap.putIfAbsent("domain", () => configs.domain);
     configMap.putIfAbsent("enableLog", () => configs.enableLog);
-    // configMap.putIfAbsent("logFilePrefix", () => configs.logFilePrefix);
-    // configMap.putIfAbsent("appGroupId", () => configs.appGroupId);
-    // configMap.putIfAbsent("enableFullHD", () => configs.enableFullHD);
-    // configMap.putIfAbsent(
-    //     "videoRawDataMemoryMode", () => configs.videoRawDataMemoryMode);
-    // configMap.putIfAbsent(
-    //     "audioRawDataMemoryMode", () => configs.audioRawDataMemoryMode);
-    // configMap.putIfAbsent(
-    //     "shareRawDataMemoryMode", () => configs.shareRawDataMemoryMode);
-    // configMap.putIfAbsent("speakerFilePath", () => configs.speakerFilePath);
+    configMap.putIfAbsent("logFilePrefix", () => configs.logFilePrefix);
+    configMap.putIfAbsent("appGroupId", () => configs.appGroupId);
+    configMap.putIfAbsent("enableFullHD", () => configs.enableFullHD);
+    configMap.putIfAbsent(
+        "videoRawDataMemoryMode", () => configs.videoRawDataMemoryMode);
+    configMap.putIfAbsent(
+        "audioRawDataMemoryMode", () => configs.audioRawDataMemoryMode);
+    configMap.putIfAbsent(
+        "shareRawDataMemoryMode", () => configs.shareRawDataMemoryMode);
+    configMap.putIfAbsent("speakerFilePath", () => configs.speakerFilePath);
 
     return await methodChannel
         .invokeMethod<String>('initSdk', configMap)
