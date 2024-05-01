@@ -92,16 +92,34 @@ class PhoneStatus {
 
 /// The reason for the failure of the telephone call.
 class PhoneFailedReason {
-  static const None = 'ZoomVideoSDKPhoneFailedReason_None'; /// For initialization.
-  static const Busy = 'ZoomVideoSDKPhoneFailedReason_Busy'; /// The telephone number is busy.
-  static const NotAvailable = 'ZoomVideoSDKPhoneFailedReason_Not_Available'; /// The telephone number is out of service.
-  static const UserHangup = 'ZoomVideoSDKPhoneFailedReason_User_Hangup'; /// The user hangs up.
-  static const OtherFail = 'ZoomVideoSDKPhoneFailedReason_Other_Fail'; /// Other reasons.
-  static const NoAnswer = 'ZoomVideoSDKPhoneFailedReason_No_Answer'; /// The user did not answer the call.
-  static const BlockNoHost = 'ZoomVideoSDKPhoneFailedReason_Block_No_Host'; /// The invitation by phone is blocked by the system due to an absent host.
-  static const BlockHighRate = 'ZoomVideoSDKPhoneFailedReason_Block_High_Rate'; /// The invite by phone is blocked by the system due to the high cost.
+  static const None = 'ZoomVideoSDKPhoneFailedReason_None';
+
+  /// For initialization.
+  static const Busy = 'ZoomVideoSDKPhoneFailedReason_Busy';
+
+  /// The telephone number is busy.
+  static const NotAvailable = 'ZoomVideoSDKPhoneFailedReason_Not_Available';
+
+  /// The telephone number is out of service.
+  static const UserHangup = 'ZoomVideoSDKPhoneFailedReason_User_Hangup';
+
+  /// The user hangs up.
+  static const OtherFail = 'ZoomVideoSDKPhoneFailedReason_Other_Fail';
+
+  /// Other reasons.
+  static const NoAnswer = 'ZoomVideoSDKPhoneFailedReason_No_Answer';
+
+  /// The user did not answer the call.
+  static const BlockNoHost = 'ZoomVideoSDKPhoneFailedReason_Block_No_Host';
+
+  /// The invitation by phone is blocked by the system due to an absent host.
+  static const BlockHighRate = 'ZoomVideoSDKPhoneFailedReason_Block_High_Rate';
+
+  /// The invite by phone is blocked by the system due to the high cost.
   static const BlockTooFrequent =
-      'ZoomVideoSDKPhoneFailedReason_Block_Too_Frequent'; /// To join the session, the invitee would press one on the phone. An invitee who fails to respond will encounter a timeout. If there are too many invitee timeouts, the call invitation feature for this session will be blocked.
+      'ZoomVideoSDKPhoneFailedReason_Block_Too_Frequent';
+
+  /// To join the session, the invitee would press one on the phone. An invitee who fails to respond will encounter a timeout. If there are too many invitee timeouts, the call invitation feature for this session will be blocked.
 }
 
 /// The chat message delete type are sent in the onChatMsgDeleteNotification:messageID:deleteBy: callback.
@@ -148,8 +166,10 @@ class DialInNumberType {
 /// Cloud recording consent type.
 class ConsentType {
   static const ConsentType_Invalid = 'ConsentType_Invalid';
-  static const ConsentType_Traditional = 'ConsentType_Traditional'; //In this case, 'accept' means agree to be recorded to gallery and speaker mode, 'decline' means leave session.
-  static const ConsentType_Individual = 'ConsentType_Individual'; //In this case, 'accept' means agree to be recorded to a separate file, 'decline' means stay in session and can't be recorded.
+  static const ConsentType_Traditional =
+      'ConsentType_Traditional'; //In this case, 'accept' means agree to be recorded to gallery and speaker mode, 'decline' means leave session.
+  static const ConsentType_Individual =
+      'ConsentType_Individual'; //In this case, 'accept' means agree to be recorded to a separate file, 'decline' means stay in session and can't be recorded.
 }
 
 /// Type of video network status.
@@ -186,7 +206,8 @@ class ZoomVideoSDKCRCCallStatus {
 /// Enumerations of the type for chat privilege.
 class ChatPrivilegeType {
   static const Unknown = 'ZoomVideoSDKChatPrivilege_Unknown';
-  static const PubliclyAndPrivately = 'ZoomVideoSDKChatPrivilege_Publicly_And_Privately';
+  static const PubliclyAndPrivately =
+      'ZoomVideoSDKChatPrivilege_Publicly_And_Privately';
   static const NoOne = 'ZoomVideoSDKChatPrivilege_No_One';
   static const Publicly = 'ZoomVideoSDKChatPrivilege_Publicly';
 }
@@ -205,15 +226,20 @@ class AnnotationToolType {
   static const AutoRectangle = 'ZoomVideoSDKAnnotationToolType_AutoRectangle';
   static const AutoEllipse = 'ZoomVideoSDKAnnotationToolType_AutoEllipse';
   static const AutoArrow = 'ZoomVideoSDKAnnotationToolType_AutoArrow';
-  static const AutoRectangleFill = 'ZoomVideoSDKAnnotationToolType_AutoRectangleFill';
-  static const AutoEllipseFill = 'ZoomVideoSDKAnnotationToolType_AutoEllipseFill';
+  static const AutoRectangleFill =
+      'ZoomVideoSDKAnnotationToolType_AutoRectangleFill';
+  static const AutoEllipseFill =
+      'ZoomVideoSDKAnnotationToolType_AutoEllipseFill';
   static const SpotLight = 'ZoomVideoSDKAnnotationToolType_SpotLight';
   static const Arrow = 'ZoomVideoSDKAnnotationToolType_Arrow';
   static const Eraser = 'ZoomVideoSDKAnnotationToolType_Eraser';
   static const Picker = 'ZoomVideoSDKAnnotationToolType_Picker';
-  static const AutoRectangleSemiFill = 'ZoomVideoSDKAnnotationToolType_AutoRectangleSemiFill';
-  static const AutoEllipseSemiFill = 'ZoomVideoSDKAnnotationToolType_AutoEllipseSemiFill';
-  static const AutoDoubleArrow = 'ZoomVideoSDKAnnotationToolType_AutoDoubleArrow';
+  static const AutoRectangleSemiFill =
+      'ZoomVideoSDKAnnotationToolType_AutoRectangleSemiFill';
+  static const AutoEllipseSemiFill =
+      'ZoomVideoSDKAnnotationToolType_AutoEllipseSemiFill';
+  static const AutoDoubleArrow =
+      'ZoomVideoSDKAnnotationToolType_AutoDoubleArrow';
   static const AutoDiamond = 'ZoomVideoSDKAnnotationToolType_AutoDiamond';
   static const AutoStampArrow = 'ZoomVideoSDKAnnotationToolType_AutoStampArrow';
   static const AutoStampCheck = 'ZoomVideoSDKAnnotationToolType_AutoStampCheck';
@@ -430,15 +456,18 @@ abstract class ZoomVideoSdkPlatform extends PlatformInterface {
   }
 
   Future<bool> acceptRecordingConsent() async {
-    throw UnimplementedError('acceptRecordingConsent() has not been implemented.');
+    throw UnimplementedError(
+        'acceptRecordingConsent() has not been implemented.');
   }
 
   Future<bool> declineRecordingConsent() async {
-    throw UnimplementedError('declineRecordingConsent() has not been implemented.');
+    throw UnimplementedError(
+        'declineRecordingConsent() has not been implemented.');
   }
 
   Future<String> getRecordingConsentType() async {
-    throw UnimplementedError('getRecordingConsentType() has not been implemented.');
+    throw UnimplementedError(
+        'getRecordingConsentType() has not been implemented.');
   }
 }
 
@@ -468,16 +497,16 @@ class ZoomVideoSdk extends ZoomVideoSdkPlatform {
     var configMap = <String, dynamic>{};
     configMap.putIfAbsent("domain", () => configs.domain);
     configMap.putIfAbsent("enableLog", () => configs.enableLog);
-    configMap.putIfAbsent("logFilePrefix", () => configs.logFilePrefix);
-    configMap.putIfAbsent("appGroupId", () => configs.appGroupId);
-    configMap.putIfAbsent("enableFullHD", () => configs.enableFullHD);
-    configMap.putIfAbsent(
-        "videoRawDataMemoryMode", () => configs.videoRawDataMemoryMode);
-    configMap.putIfAbsent(
-        "audioRawDataMemoryMode", () => configs.audioRawDataMemoryMode);
-    configMap.putIfAbsent(
-        "shareRawDataMemoryMode", () => configs.shareRawDataMemoryMode);
-    configMap.putIfAbsent("speakerFilePath", () => configs.speakerFilePath);
+    // configMap.putIfAbsent("logFilePrefix", () => configs.logFilePrefix);
+    // configMap.putIfAbsent("appGroupId", () => configs.appGroupId);
+    // configMap.putIfAbsent("enableFullHD", () => configs.enableFullHD);
+    // configMap.putIfAbsent(
+    //     "videoRawDataMemoryMode", () => configs.videoRawDataMemoryMode);
+    // configMap.putIfAbsent(
+    //     "audioRawDataMemoryMode", () => configs.audioRawDataMemoryMode);
+    // configMap.putIfAbsent(
+    //     "shareRawDataMemoryMode", () => configs.shareRawDataMemoryMode);
+    // configMap.putIfAbsent("speakerFilePath", () => configs.speakerFilePath);
 
     return await methodChannel
         .invokeMethod<String>('initSdk', configMap)
